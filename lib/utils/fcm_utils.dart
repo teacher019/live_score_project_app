@@ -1,4 +1,5 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/cupertino.dart';
 
 class FcmUtils {
   static Future<void> initialize() async {
@@ -14,9 +15,9 @@ class FcmUtils {
     // Foreground - App is visible and running
     // Background - App is running, but not visible/minimize
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print(message.notification?.title);
-      print(message.notification?.body);
-      print(message.data);
+      debugPrint(message.notification?.title);
+      debugPrint(message.notification?.body);
+      debugPrint(message.data.toString());
 
       if (message.data['route'] != null) {
         // Navigate to the specific route
