@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:live_score_project_app/app.dart';
-import 'package:live_score_project_app/utils/fcm-utils.dart';
+import 'package:live_score_project_app/utils/fcm_utils.dart';
 
 import 'firebase_options.dart';
 
@@ -39,5 +39,6 @@ Future<void> main() async {
 
   FcmUtils.onRefreshToken();
 
-  runApp(const LiveScoreProjectApp());
+  runApp(const LiveScoreApp());
 }
+
